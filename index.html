@@ -3,32 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-    
     <!-- {% if message %}
-        <div id="alert-message"  class="alert alert-danger" role="alert">
-            {{ message }}
-        </div>
-    {% elif messageEmail %}
-        <div id="alert-message"  class="alert alert-danger" role="alert">
-            {{ messageEmail }}
-        </div>
+    <div id="alert-message" class="alert alert-danger" role="alert">
+        {{ message }}
+      </div>
+    {% elif duplikasi %}
+    <div id="alert-message" class="alert alert-danger" role="alert">
+        {{ duplikasi }}
+      </div>
+    {% elif succesfuly %}
+      <div id="alert-message" class="alert-success" role="alert">
+        {{ succesfuly }}
+      </div>
     {% endif %} -->
+
 
     <div class="container">
         <div class="card-container">
-            <form action="/login" method="post">
-                <h2 class="head-login">Login</h2>
-                <input class="input-block" type="email" name="email" placeholder="Email">
-                <input class="input-block" type="password" name="password" placeholder="password">
-                <button>Login</button>
-                <div class="dont-have-account">
-                    <p>Dont have Account? <a href="/signup">Create an Account</a></p>
+            <div class="left">
+                <div class="left-container">
+                    <h2>Welcome To Meet Guy Brother!</h2>
+                    <p>Meat Guy Brother adalah sebuah restorant yang menyediakan berbagai makanan dan minuman dengan harga yang murah</p>
+                    <br>
+                    <p class="p1">Catatan</p>
+                    <p>Isi data Dengan benar dan Alamat Rumah dengan detail</p>
+                    <br>
+                    <p class="button-login">Already have Account? <a href="/login">Login</a></p>
                 </div>
-            </form>
+            </div>
+            <div class="right">
+                <div class="right-container">
+                    <form action="/signup" method="post">
+                        <h2 class="h2-right">Sign Up</h2>
+                        <input type="text" name="nama" placeholder="Name">
+                        <input type="email" name="email" placeholder="Alamat Email">
+                        <input type="password" name="password" placeholder="Password">
+                        <input type="number" name="hp" placeholder="Handphone">
+                        <textarea placeholder="Alamat Rumah" name="alamat" rows="10"></textarea>
+                        <button>Sign Up</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
