@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+    <!-- {% if message %}
+        <div id="alert-message"  class="alert alert-danger" role="alert">
+            {{ message }}
+        </div>
+    {% elif messageEmail %}
+        <div id="alert-message"  class="alert alert-danger" role="alert">
+            {{ messageEmail }}
+        </div>
+    {% endif %} -->
+
+    <div class="container">
+        <div class="card-container">
+            <form action="/login" method="post">
+                <h2 class="head-login">Login</h2>
+                <input class="input-block" type="email" name="email" placeholder="Email">
+                <input class="input-block" type="password" name="password" placeholder="password">
+                <button>Login</button>
+                <div class="dont-have-account">
+                    <p>Dont have Account? <a href="/signup">Create an Account</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        setTimeout(function() {
+            var alertMessage = document.getElementById('alert-message');
+            if (alertMessage) {
+            alertMessage.style.display = 'none';
+            }
+        }, 2000); 
+    </script>
+</body>
+</html>
